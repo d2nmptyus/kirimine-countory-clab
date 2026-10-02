@@ -1,0 +1,874 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #333;
+    font-size: 1rem;
+    font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+}
+
+a {
+    color: #333;
+    display: inline-block;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+    /* display: inline-block; */
+}
+
+.wrapper {
+    max-width: 1262px;
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+header {
+    background-color: #333;
+    padding-inline: 30px;
+}
+
+header .wrapper{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+header .logo{
+    width: 180px;
+    padding-top: 8px;
+}
+
+header ul {
+    line-height: 3rem;
+}
+
+header ul li {
+    margin-left: 48px;
+}
+
+header ul li a {
+    color: #fff;
+}
+
+/* humburger */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    color: #fff;
+    padding: 40px;
+    transition: all 0.5s;
+    z-index: 20;
+    opacity: 0;
+}
+nav a {
+    color: #fff;
+}
+nav li {
+    margin-bottom: 14px;
+}
+
+.toggle_btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    z-index: 20;
+    margin-left: auto;
+}
+.toggle_btn span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.5s;
+    position: absolute;
+}
+.toggle_btn :nth-child(1) {
+    top: 10px;
+}
+.toggle_btn :nth-child(2) {
+    top: 18px;
+}
+
+.mask {
+    display: none;
+    transition: 0.5s;
+}
+
+.open nav {
+    left: 0;
+    opacity: 1;
+}
+
+.open .toggle_btn span {
+    background-color: #fff;
+}
+.open .toggle_btn span:nth-child(1) {
+    transform: translateY(4px) rotate(-45deg);
+}
+.open .toggle_btn span:nth-child(2) {
+    transform: translateY(-4px) rotate(45deg);
+}
+
+.open .mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.8;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.mv {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/mainvisual.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.site-title {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    filter: drop-shadow(1px 1px 10px #c0c0c0);
+    color:#fff;
+    font-size: 100px;
+}
+
+.sp-br {
+    display: none;
+}
+
+.sub-title {
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    filter: drop-shadow(1px 1px 10px #c0c0c0);
+    color:#fff;
+    font-size: 32px;
+}
+
+.news-wrapper {
+    margin-top: 120px;
+}
+
+.news-title {
+    padding-top: 50px;
+}
+
+.news-content {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-top: 80px;
+}
+
+.news-list {
+    width: 70%;
+}
+
+.news-list li {
+    line-height: 2.5;
+    list-style: disc;
+    display: list-item;
+}
+
+
+
+.news-list li a {
+    display:flex;
+    align-items:center;
+    color:#333;
+}
+
+.news-list time {
+    width:220px;
+}
+
+.news-list span {
+    font-size:16px;
+}
+
+.more-btn {
+    width:140px;
+    height:48px;
+    border:1px solid #333;
+    border-radius:100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:16px;
+    background-color: #fff;
+}
+
+.price {
+    width: 100%;
+    background-image: url(../images/price.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+    margin-block: 65px;
+    /* padding-inline: 24px; */
+}
+
+.price-title {
+    /* padding-left: 80px; */
+    padding-top: 30px;
+}
+
+.price-title h2 {
+    padding-bottom: 50px;
+}
+
+.price-flex {
+    display: flex;
+    color: #fff;
+    margin-top: px;
+    /* margin-left: 72px; */
+    gap :30px;
+    justify-content: space-between;
+}
+
+.price-flex .more-btn {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.access-info h3 {
+    font-family: "游明朝", "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 24px;
+}
+
+.access {
+    display: flex;
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.access-info {
+    width: 55%;
+    padding: 50px 70px;
+    box-sizing: border-box;
+    background-image: url(../images/accessmap.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.acccess-info .more-btn{
+    margin-top: 120px;
+}
+
+.access-map {
+    width: 45%;
+}
+
+.access-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    border: none;
+    display: block;
+}
+
+p.address{
+    margin-top: 60px;
+    margin-bottom: 80px;
+    font-size: 24px;
+}
+
+.footer-1st {
+    text-align: left;
+    background: #333333;
+    color: #fff;
+    font-size: 12px;
+    padding-block: 100px;
+    margin: 0 auto;
+}
+
+.footer-1st .wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.footer-1st .item {
+    width: calc(100% / 3);
+    line-height: 2;
+}
+
+.footer-1st .item ul li a {
+    color: #fff;
+    line-height: 2rem;
+}
+
+.footer-2nd {
+    text-align: center;
+}
+
+
+/*access*/
+
+.access-mv {
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/accessmap.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 80px;
+    
+}
+
+.content-title{
+    text-align: center;
+    color: #fff;
+    font-size: 96px;
+    font-weight: 100;
+    padding-top: 60px;
+}
+
+.content-sub-title {
+    color: #fff;
+    text-align: center;
+}
+
+.section-title {
+    text-align: center;
+    font-family: "游明朝", "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 32px;
+}
+
+.section-title p {
+    font-size: 16px;
+    margin-top: 80px;
+}
+
+.map-address {
+    width: 650px;
+    margin: 0 auto;
+}
+
+.map-address p{
+    display: inline-block;
+    text-align: left;
+}
+
+.spacer-margin {
+    margin-top: 3em;
+}
+
+.access-map-center{
+    text-align: center;
+    width: 100%;
+    margin-block: 60px 120px;
+}
+
+
+/* price */
+
+.price-mv {
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/price.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.price-inner {
+    max-width: 1200px;
+    width: 100%;
+    text-align: left;
+    margin: auto;
+    margin-block: 80px;
+}
+
+.price-title {
+    margin-bottom: 80px;
+}
+
+.price-table {
+    margin-bottom: 80px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.price-table th,
+.price-table td {
+    border: 2px solid #222;
+    height: 110px;
+    font-size: 24px;
+}
+
+.price-table thead th {
+    background-color: #ffffff;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+table , td, th {
+	border: 2px solid #595959;
+	border-collapse: collapse;
+}
+
+table td th:first-child {
+    width: 20%;
+    
+}
+
+.price-table thead th:nth-child(2),
+.price-table thead th:nth-child(3) {
+    width: 40%;
+}
+
+.price-table tr:first-child td {
+    background-color: #f3eee5;
+}
+
+
+/* news */
+
+.news-mv {
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/news.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.news-list {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-item {
+    margin-bottom: 48px;
+}
+
+.news-text {
+    padding-left: 30px;
+}
+
+.news-text h2 {
+    margin-bottom: 30px;
+}
+
+.news-item a {
+    display: flex;
+    align-items: center;
+
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-block: 80px;
+}
+
+.pagination a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 55px;
+    border: 1px solid #333;
+    font-size: 24px;
+}
+
+.pagination a:hover {
+    background-color: #a3a3a3;
+    color: #fff;
+    transition: 0.3s;
+}
+
+
+/* topics */
+
+
+.topics-mv {
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/topics.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.topics-content {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.topics-content h2 {
+    margin-bottom: 26px;
+}
+
+.topics-content p {
+    margin-bottom: 115px;
+}
+
+.topics-img {
+    margin-bottom: 60px;
+}
+
+.topics-pagination {
+    width:140px;
+    height:48px;
+    border:1px solid #333;
+    border-radius:100px;
+    justify-content:center;
+    align-items:center;
+    font-size:16px;
+    margin: 0 auto 36px;
+    background-color: #fff;
+}
+
+.topics-pagination a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    border-radius: 100px;
+}
+
+.topics-pagination a:hover {
+
+    background-color: #a3a3a3;
+    color: #fff;
+    transition: 0.3s;
+}
+
+
+/* contact */
+
+
+.contact-mv {
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/contact.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.contact-container {
+    max-width: 1200px;
+    border: solid 2px #333;
+    margin: 80px auto;
+    background-color: #F6F1EA;
+}
+
+.heading {
+    align-items: center; /* 横線を上下中央 */
+    display: flex; /* 文字と横線を横並び */
+    justify-content: center; /* 文字を中央寄せ */
+    gap :5%;
+}
+
+.heading::before,
+.heading::after {
+    border-top:solid 1px #333; /* 線の色　*/
+    content: "";
+    height: 5px; /* 横線の高さ */
+    width: 30%; /* 横線の長さ */
+}
+.heading::before {
+    margin-right: 60px; /* 文字との余白 */
+}
+.heading::after {
+    margin-left: 60px; /* 文字との余白 */
+}
+
+.contact-container h3 {
+    text-align: center;
+    padding-block: 56px;
+}
+
+.contact-form {
+    max-width: 670px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.form-item {
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.form-item label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.form-item input,
+.form-item select,
+.form-item textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    padding: 12px 28px;
+    height: 56px;
+}
+
+.form-item textarea {
+    height: 220px;
+    resize: vertical;
+}
+
+.form-item input::placeholder,
+.form-item textarea::placeholder {
+    color: #999;
+}
+
+.form-item select {
+    color: #999;
+    appearance: none;
+    position: relative;
+}
+
+.select-item::after {
+    content: "▼";
+    position: absolute;
+    right: 25px;
+    top: 52px;
+    font-size: 12px;
+    color: #333;
+    pointer-events: none;
+}
+
+.privacy {
+    font-size: 12px;
+    color: #999;
+    margin-top: -35px;
+    margin-bottom: 50px;
+}
+
+.submit-btn {
+    display: block;
+    width: 130px;
+    height: 45px;
+    margin: 0 auto ;
+    border: 1px solid #333;
+    border-radius: 30px;
+    background-color: #008000;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #006b00;
+}
+
+@media (max-width:882px) {
+
+    .site-title {
+        font-size: 48px;
+        text-align: left;
+        top: 40%;
+        margin-left: 30px;
+    }
+
+    .sub-title {
+        top:25%;
+        font-size: 20px;
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    .sp-br {
+        display: inline;
+    }
+
+    .news-title {
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    .price {
+        margin-block: 40px;
+        padding: 50px 20px;
+        box-sizing: border-box;
+    }
+
+    .price-title {
+        padding-left: 0;
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .price-title h2 {
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    .price-flex {
+        display: block;
+        margin: 0;
+    }
+
+    .price-flex p {
+        font-size: 14px;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    .price-flex .more-btn {
+        position: static;
+        width: 140px;
+        height: 48px;
+        margin: 30px auto 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .access {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .access-info {
+        width: 100%;
+    }
+
+    .access-map {
+        width: 100%;
+    }
+
+    .more-btn {
+        margin: 0 auto;
+    }
+
+    .news-content {
+        flex-direction: column;
+    }
+
+    .news-content .more-btn {
+        margin-top: 24px;
+        margin-inline: auto 0;
+    }
+
+    .news-list {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .news-list li a {
+        align-items: flex-start;
+    }
+
+    .news-list li {
+        margin-left: 24px;
+    }
+
+    .news-list time {
+        width: auto;
+        white-space: nowrap;
+        margin-right: 10px;
+    }
+
+    .news-text h2 {
+        font-size: 16px;
+    }
+
+    .news-text p {
+    display: none;
+    }
+
+    .contact-container h3 {
+        font-size: 16px;
+    }
+
+    .toggle_btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        cursor: pointer;
+        z-index: 30;
+        margin-left: auto;
+    }
+
+    .toggle_btn span {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        transition: 0.3s;
+    }
+
+    .toggle_btn span:nth-child(1) {
+        top: 10px;
+    }
+
+    .toggle_btn span:nth-child(2) {
+        top: 18px;
+    }
+
+    .open .toggle_btn span:nth-child(1) {
+        top: 14px;
+        transform: rotate(45deg);
+    }
+
+    .open .toggle_btn span:nth-child(2) {
+        top: 14px;
+        transform: rotate(-45deg);
+    }
+
+    .footer-1st .wrapper{
+        display: block;
+    }
+
+
+}
